@@ -5,6 +5,7 @@ import webbrowser
 import playsound
 import random
 import os
+import sys
 from gtts import gTTS
 from time import ctime
 
@@ -26,6 +27,7 @@ alexa_speak('Got it!')
 
 def event():
     alexa_speak('Hey! You need ' + task)
+    sys.exit()
 
 schedule.every().day.at(timee).do(event)
 
